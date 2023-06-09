@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Writingsample</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Fontawesome Icons v6.2.0 -->
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  </head>
+
+
+  <style type="text/css">
+    body{
+      background-color: #574a48;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        list-style: none;
+        box-sizing: border-box;
+
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+        position: absolute;
+        margin-top: 60px;
+
+    }
+
+    .container nav {
+        width: 100px;
+        height: min-content;
+        padding: 16px;
+        border-radius: 12px;
+        backdrop-filter: blur(18px);
+        background: rgba(230, 235, 240, .7);
+        border: 2px solid rgba(230, 235, 240, .7);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .05);
+        transition: .6s cubic-bezier(.8, .5, .5, .8);
+    }
+
+    .container nav:hover {
+        width: 320px;
+    }
+
+    nav .brand {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    nav .brand img {
+        width: 65px;
+        border-radius: 50%;
+        border: 4px solid rgba(230, 235, 240, .8);
+    }
+
+    nav .brand p {
+        color: #505257;
+        font-weight: 500;
+        font-style: italic;
+        text-align: left;
+        line-height: 22px;
+        margin: 0 0 0 12px;
+    }
+
+    nav .brand p span {
+        color: #3c3e43;
+        display: block;
+        font-size: 26px;
+        font-style: normal;
+    }
+
+    nav .line {
+        width: 100%;
+        height: 2px;
+        margin: 32px 0;
+        border-radius: 30%;
+        background: #87a3af;
+    }
+
+    nav .list {
+        width: 100%;
+    }
+
+    nav .list li {
+        display: flex;
+        margin: 12px 0;
+        padding: 20px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: .4s ease-in-out;
+    }
+
+    nav .list li:hover {
+        background: rgba(230, 235, 240, .4);
+    }
+
+    nav .list li.active {
+        background: #3681f6;
+    }
+
+    nav .list li.active span {
+        color: #fff;
+    }
+
+    nav .list li.active i {
+        background: none;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        color: #e6ebf0;
+    }
+
+    nav .list i {
+        font-size: 20px;
+        background: linear-gradient(
+            -135deg,
+            #3c3e43,
+            #838487
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    nav .list span {
+        color: #505257;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 0 12px;
+    }
+
+    nav .brand p,
+    nav .list span {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(20px);
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            pointer-events: unset;
+            transform: translateX(0);
+        }
+    }
+
+    nav:hover .brand p {
+        animation: fadeIn .4s ease-out forwards;
+        animation-delay: .4s;
+    }
+
+    nav:hover .list span {
+        animation: fadeIn .4s ease-out forwards;
+    }
+
+    nav:hover .list li:nth-child(1) span {
+        animation-delay: .5s;
+    }
+
+    nav:hover .list li:nth-child(2) span {
+        animation-delay: .6s;
+    }
+
+    nav:hover .list li:nth-child(3) span {
+        animation-delay: .7s;
+    }
+
+    nav:hover .list li:nth-child(4) span {
+        animation-delay: .8s;
+    }
+
+    nav:hover .list li:nth-child(5) span {
+        animation-delay: .9s;
+    }
+
+    nav:hover .list li:nth-child(7) span {
+        animation-delay: 1s;
+    }
+
+    .zhengwen{
+  padding-left: 11em;
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+  color: #574a47;
+  background-color: #93a1a5;
+  text-align: center;
+}
+
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  width: 9em;
+  margin-top:120px;
+}
+h1 {
+  font-family: Helvetica, Geneva, Arial,
+        SunSans-Regular, sans-serif }
+ul.navbar li {
+  background: white;
+  margin: 0.5em 0;
+  padding: 0.3em;
+  }
+ul.navbar a {
+  text-decoration: none }
+a:link {
+  color: blue }
+a:visited {
+  color: #a0908e }
+
+
+  </style>
+
+
+  <body>
+    <!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">  <img src="image/title.png" alt="ANJIN." style="width:15%"> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="whosaj.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Story</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Works
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Writingsample.html">Writing sample</a></li>
+            <li><a class="dropdown-item" href="productdesign.html">product design</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Unfinished</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- 文章左侧导航栏 -->
+<div class="container">
+
+    <nav>
+
+        <div class="brand">
+            <img src="image/10.jpg" alt="...">
+            <p>
+                thank you,
+                <span>here's my writing samples</span>
+            </p>
+        </div>
+
+        <hr class="line">
+
+        <ul class="list">
+            <li>
+                <i class="fa-solid fa-box"></i>
+                <span>research plan 1</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-box"></i>
+                <span>marketing plan 1</span>
+            </li>
+            <hr class="line">
+            <li>
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>all the articles</span>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- researchplan正文 -->
+<div class="zhengwen">
+  <h1 class="work_title">My Marketing Plan</h1>
+  <div class="gen_desc">
+    This is a marketing plan for PEAK-TAICHIbrotherpower.
+  </div>
+  <a href="https://kdocs.cn/l/cf4wCK8Tit6A">
+  <img src="image/04.png" class="img-fluid" alt="cover of writing_sample" style="width:50%">
+  </a>
+</div>
+<br><br><br>
+
+<!-- footer -->
+
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>ANJIN</h2>
+        </div>
+        <div class="col-md-2">
+          <h4>MY WORK</h4>
+          <ul class="list-unstyled">
+            <li><a href="writingsample.html">my article</a></li>
+            <li><a href="productdesign.html">graphic design</a></li>
+            <li><a href="productdesign.html">product design</a></li>
+            <li><a href="#">My jottings</a></li>
+            <li><a href="#">others</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4>used tools</h4>
+          <ul class="list-unstyled">
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>Photoshop</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>About me</h4>
+          <ul class="list-unstyled">
+            <li>Name: An jin</li>
+            <li>Email: 3268176405@qq.com</li>
+            <li>Wechat: cucaj123</li>
+          </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div></footer>
+<!-- 这里也是有奇怪的bug 不知道为什么空这么多出来 -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
